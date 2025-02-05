@@ -11,4 +11,9 @@ extension UIStoryboard {
         let bundle = Bundle.main
         return UIStoryboard(name: "Main", bundle: bundle)
     }
+
+    static var home: UIStoryboard {
+        let bundle = Bundle.main
+        return UIStoryboard(name: "Home", bundle: bundle)
+    }
 }

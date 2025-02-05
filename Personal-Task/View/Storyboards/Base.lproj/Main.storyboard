@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -267,6 +268,16 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ftw-l2-03h">
+                                <rect key="frame" x="16" y="188.33333333333334" width="361" height="45"/>
+                                <color key="backgroundColor" name="text-bg-color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="wUg-dQ-c0K"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="namePhonePad" textContentType="name"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnZ-02-D9F" customClass="SubmitButton" customModule="Personal_Task" customModuleProvider="target">
                                 <rect key="frame" x="16" y="748" width="361" height="50"/>
                                 <color key="backgroundColor" name="app-mint"/>
@@ -282,16 +293,6 @@
                                     <action selector="continueButtonTapped:" destination="HwM-VO-dSI" eventType="touchUpInside" id="hlx-48-FOf"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ftw-l2-03h">
-                                <rect key="frame" x="16" y="188.33333333333334" width="361" height="45"/>
-                                <color key="backgroundColor" name="text-bg-color"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="wUg-dQ-c0K"/>
-                                </constraints>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="namePhonePad" textContentType="name"/>
-                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2oK-6p-v4e"/>
                         <color key="backgroundColor" name="app-dark-gray"/>
@@ -375,6 +376,92 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7d7-ep-MJF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4128" y="2"/>
+        </scene>
+        <!--Onboarding App IconVC-->
+        <scene sceneID="Thf-FC-rK9">
+            <objects>
+                <viewController storyboardIdentifier="OnboardingAppIconVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="I6d-tg-k73" customClass="OnboardingAppIconVC" customModule="Personal_Task" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TyV-uY-Ssm">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jGr-rL-3c0">
+                                <rect key="frame" x="16" y="89" width="361" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which icon style do you like the most?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="roA-IO-prI">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This will be the app's icon on your phone's home screen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0wI-xK-9Wi">
+                                        <rect key="frame" x="0.0" y="80" width="361" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ksp-qW-Pyu">
+                                <rect key="frame" x="16" y="267" width="361" height="451"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="bxs-mQ-aHy">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3Ne-SH-inj">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ERA-Pw-rkS">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k3N-AG-ato" customClass="SubmitButton" customModule="Personal_Task" customModuleProvider="target">
+                                <rect key="frame" x="16" y="748" width="361" height="50"/>
+                                <color key="backgroundColor" name="app-mint"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6K9-Be-Nz4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="continueButtonTapped:" destination="U6J-Zq-n0O" eventType="touchUpInside" id="BSv-zE-TRj"/>
+                                    <action selector="continueButtonTapped:" destination="kc5-qy-Kp7" eventType="touchUpInside" id="Qng-y1-3Oh"/>
+                                    <action selector="continueButtonTapped:" destination="I6d-tg-k73" eventType="touchUpInside" id="hha-3q-x3m"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7Zg-Ku-O79"/>
+                        <color key="backgroundColor" name="app-dark-gray"/>
+                        <constraints>
+                            <constraint firstItem="jGr-rL-3c0" firstAttribute="leading" secondItem="TyV-uY-Ssm" secondAttribute="leading" constant="16" id="3hC-yR-9pR"/>
+                            <constraint firstItem="7Zg-Ku-O79" firstAttribute="trailing" secondItem="k3N-AG-ato" secondAttribute="trailing" constant="16" id="9kY-kJ-xuI"/>
+                            <constraint firstItem="k3N-AG-ato" firstAttribute="leading" secondItem="7Zg-Ku-O79" secondAttribute="leading" constant="16" id="D1U-ns-dUo"/>
+                            <constraint firstItem="Ksp-qW-Pyu" firstAttribute="leading" secondItem="7Zg-Ku-O79" secondAttribute="leading" constant="16" id="EGk-Xo-wLC"/>
+                            <constraint firstItem="7Zg-Ku-O79" firstAttribute="trailing" secondItem="jGr-rL-3c0" secondAttribute="trailing" constant="16" id="IG2-H1-5hC"/>
+                            <constraint firstItem="jGr-rL-3c0" firstAttribute="top" secondItem="7Zg-Ku-O79" secondAttribute="top" constant="30" id="NaY-ED-C7b"/>
+                            <constraint firstItem="Ksp-qW-Pyu" firstAttribute="top" secondItem="jGr-rL-3c0" secondAttribute="bottom" constant="50" id="TY3-Iv-Xgw"/>
+                            <constraint firstItem="7Zg-Ku-O79" firstAttribute="trailing" secondItem="Ksp-qW-Pyu" secondAttribute="trailing" constant="16" id="bfW-x7-AiH"/>
+                            <constraint firstItem="7Zg-Ku-O79" firstAttribute="bottom" secondItem="k3N-AG-ato" secondAttribute="bottom" constant="20" id="cUE-ya-vTf"/>
+                            <constraint firstItem="k3N-AG-ato" firstAttribute="top" secondItem="Ksp-qW-Pyu" secondAttribute="bottom" constant="30" id="kpD-8U-E2C"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Ksp-qW-Pyu" id="V0b-iJ-My5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RD1-n4-9Or" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4977" y="-23"/>
         </scene>
     </scenes>
     <resources>

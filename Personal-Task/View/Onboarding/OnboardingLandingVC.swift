@@ -31,8 +31,8 @@ final class OnboardingLandingVC: UIViewController {
     }
 
     private func setTitle() {
-        let backgroundColor = UIColor(named: "shade-blue") ?? .clear
-        let foregroundColor = UIColor(named: "shade-white-text") ?? .white
+        let backgroundColor = UIColor.shadeBlue
+        let foregroundColor = UIColor.shadeWhiteText
         let attribute: NSAttributedString = {
             let attributedString = NSMutableAttributedString()
             attributedString.append(NSAttributedString(string: "Expand your Vocabulary in", attributes: [

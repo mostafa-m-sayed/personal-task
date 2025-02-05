@@ -31,6 +31,8 @@ enum OnboardingPageType {
     case name
     case wordsCount
     case level
+    case appIcon
+    case goal
 }
 
 struct SelectionOptionTheme {

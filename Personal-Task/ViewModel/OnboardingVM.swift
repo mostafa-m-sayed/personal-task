@@ -19,7 +19,8 @@ class OnboardingVM {
                 ageRange(),
                 gender(),
                 wordsCount(),
-                level()
+                level(),
+                goal()
         ]
     }
 
@@ -80,6 +81,20 @@ class OnboardingVM {
 
         let onboarding = Onboarding(title: "What's your vocabulary level?",
                                     pageType: .level, pageOptions: options, selectionOptionTheme: SelectionOptionTheme(themeBackgroundColor: Constants.themeColor, selectionType: .singleSelection), hasSkip: false, subtitle: "Select an option to continue")
+        return onboarding
+    }
+    
+    private func goal() -> Onboarding {
+        let options: [SelectionOptionViewDataModel] = [
+            SelectionOptionViewDataModel(title: "Enhance my lexicon", isSelected: false),
+            SelectionOptionViewDataModel(title: "Get ready for a test", isSelected: false),
+            SelectionOptionViewDataModel(title: "Improve my job prospects", isSelected: false),
+            SelectionOptionViewDataModel(title: "Enjpy learning new words", isSelected: false),
+            SelectionOptionViewDataModel(title: "Other", isSelected: false)
+        ]
+
+        let onboarding = Onboarding(title: "Do you have a specefic goal in mind?",
+                                    pageType: .goal, pageOptions: options, selectionOptionTheme: SelectionOptionTheme(themeBackgroundColor: Constants.themeColor, selectionType: .multipleSelection), hasSkip: false, subtitle: "Select at least one option to continue")
         return onboarding
     }
 

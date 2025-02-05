@@ -7,27 +7,35 @@
 
 import UIKit
 
-class SelectionOptionViewDataModel {
+class SelectionOptionViewDataModel: Hashable {
     internal init(title: String, isSelected: Bool, didTap: ((Bool) -> ())? = nil) {
         self.title = title
         self.isSelected = isSelected
         self.didTap = didTap
     }
-    
     let title: String
     var isSelected: Bool
     var didTap: ((_ isSelected: Bool) -> ())?
+
+    static func == (lhs: SelectionOptionViewDataModel, rhs: SelectionOptionViewDataModel) -> Bool {
+        return lhs.title == rhs.title && lhs.isSelected == rhs.isSelected
+    }
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(title)
+        hasher.combine(isSelected)
+    }
 }
 enum SelectionType {
     case singleSelection
     case multipleSelection
 }
 
-final class SelectionOptionView: UIView {
+class SelectionOptionView: UIView {
     
     @IBOutlet private weak var checkView: UIView!
     @IBOutlet private weak var tickImage: UIImageView!
-    @IBOutlet private weak var containerView: UIView!
+    @IBOutlet internal weak var containerView: UIView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var checkContainerView: UIView!
     
@@ -79,19 +87,19 @@ final class SelectionOptionView: UIView {
             if selectionType == .singleSelection {
                 tickImage.isHidden = true
                 checkView.isHidden = false
-                checkContainerView.backgroundColor = UIColor(named: "app-light-gray")
+                checkContainerView.backgroundColor = UIColor.appLightGray
                 checkView.backgroundColor = UIColor(named: themeBackgroundColor)
             } else {
                 tickImage.isHidden = false
                 checkView.isHidden = true
-                checkContainerView.backgroundColor = UIColor(named: "app-mint")
+                checkContainerView.backgroundColor = UIColor.appMint
                 
             }
             containerView.layer.borderColor = UIColor.white.cgColor
             titleLabel.textColor = UIColor.white
         } else {
-            containerView.layer.borderColor = UIColor(named: "app-light-gray")?.cgColor
-            titleLabel.textColor = UIColor(named: "app-light-gray")
+            containerView.layer.borderColor = UIColor.appLightGray.cgColor
+            titleLabel.textColor = UIColor.appLightGray
             
             checkContainerView.backgroundColor = UIColor(named: themeBackgroundColor)
 
@@ -102,16 +110,16 @@ final class SelectionOptionView: UIView {
 
     private func setupUI(_ selectionTheme: SelectionOptionTheme) {
 
-        titleLabel.textColor = UIColor(named: "app-light-gray")
+        titleLabel.textColor = UIColor.appLightGray
         
         containerView.layer.cornerRadius = selectionTheme.containerCornerRadius
         containerView.layer.borderWidth = 1
-        containerView.layer.borderColor = UIColor(named: "app-light-gray")?.cgColor
+        containerView.layer.borderColor = UIColor.appLightGray.cgColor
         
         checkContainerView.makeCircular()
         checkContainerView.backgroundColor = UIColor(named: selectionTheme.themeBackgroundColor)
         checkContainerView.layer.borderWidth = 1
-        checkContainerView.layer.borderColor = UIColor(named: "app-light-gray")?.cgColor
+        checkContainerView.layer.borderColor = UIColor.appLightGray.cgColor
         
         checkView.makeCircular()
         checkView.backgroundColor = UIColor(named: selectionTheme.themeBackgroundColor)

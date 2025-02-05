@@ -39,11 +39,22 @@
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		06DDE6DD2D51408C00852732 /* Exceptions for "Personal-Task" folder in "Compile Sources" phase from "Personal-Task" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = 06EF03F32D497D9500C625AF /* Sources */;
+			membershipExceptions = (
+				Resources/MockData/Vocabularies.json,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		06EF03F92D497D9600C625AF /* Personal-Task */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				06EF041F2D497D9700C625AF /* Exceptions for "Personal-Task" folder in "Personal-Task" target */,
+				06DDE6DD2D51408C00852732 /* Exceptions for "Personal-Task" folder in "Compile Sources" phase from "Personal-Task" target */,
 			);
 			path = "Personal-Task";
 			sourceTree = "<group>";

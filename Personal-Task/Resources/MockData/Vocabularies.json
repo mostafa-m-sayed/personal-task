@@ -1,0 +1,81 @@
+{
+  "vocabularies": [
+    {
+      "word": "trepidation",
+      "pronunciation": "trepi delfan",
+      "type": "n",
+      "meaning": "A feeling of fear or anxiety about something that may happen.",
+      "example": "She felt a sense of trepidation as she approached the dark, deserted alley."
+    },
+    {
+      "word": "ubiquitous",
+      "pronunciation": "you-bik-wi-tus",
+      "type": "adj",
+      "meaning": "Present, appearing, or found everywhere.",
+      "example": "Smartphones have become so ubiquitous that it's rare to see someone without one."
+    },
+    {
+      "word": "ephemeral",
+      "pronunciation": "ih-fem-er-uhl",
+      "type": "adj",
+      "meaning": "Lasting for a very short time.",
+      "example": "The beauty of the sunset was ephemeral, fading within minutes."
+    },
+    {
+      "word": "serendipity",
+      "pronunciation": "ser-uhn-dip-i-tee",
+      "type": "n",
+      "meaning": "The occurrence of events by chance in a happy or beneficial way.",
+      "example": "It was pure serendipity that they met at the café after years of losing touch."
+    },
+    {
+      "word": "meticulous",
+      "pronunciation": "muh-tik-yuh-luhs",
+      "type": "adj",
+      "meaning": "Showing great attention to detail; very careful and precise.",
+      "example": "The artist was meticulous in painting every tiny leaf on the tree."
+    },
+    {
+      "word": "quintessential",
+      "pronunciation": "kwin-tuh-sen-shuhl",
+      "type": "adj",
+      "meaning": "Representing the most perfect or typical example of a quality or class.",
+      "example": "The little café was the quintessential Parisian experience, complete with croissants and cobblestone streets."
+    },
+    {
+      "word": "altruistic",
+      "pronunciation": "al-troo-is-tik",
+      "type": "adj",
+      "meaning": "Showing a selfless concern for the well-being of others.",
+      "example": "Her altruistic nature led her to volunteer at the shelter every weekend."
+    },
+    {
+      "word": "eloquent",
+      "pronunciation": "el-uh-kwuhnt",
+      "type": "adj",
+      "meaning": "Fluent or persuasive in speaking or writing.",
+      "example": "The speaker's eloquent words moved the audience to tears."
+    },
+    {
+      "word": "resilient",
+      "pronunciation": "ri-zil-yuhnt",
+      "type": "adj",
+      "meaning": "Able to withstand or recover quickly from difficult conditions.",
+      "example": "Despite the setbacks, she remained resilient and determined to succeed."
+    },
+    {
+      "word": "pervasive",
+      "pronunciation": "per-vey-siv",
+      "type": "adj",
+      "meaning": "Spreading widely throughout an area or a group of people.",
+      "example": "The pervasive smell of fresh bread filled the entire neighborhood."
+    },
+    {
+      "word": "ambivalent",
+      "pronunciation": "am-biv-uh-luhnt",
+      "type": "adj",
+      "meaning": "Having mixed feelings or contradictory ideas about something or someone.",
+      "example": "She felt ambivalent about the job offer, as it required moving to a new city."
+    }
+  ]
+}

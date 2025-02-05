@@ -75,7 +75,6 @@ class OnboardingSelectionVC: UIViewController {
 
     @IBAction private func continueButtonTapped(_ sender: Any) {
         guard let pageType = onboardingVM?.pageType else { return }
-
         switch pageType {
         case .howDidYouHear:
             goToTailor()
@@ -85,6 +84,10 @@ class OnboardingSelectionVC: UIViewController {
             goToName()
         case .wordsCount:
             goToLevel()
+        case .level:
+            goToAppIcon()
+        case .goal:
+            goToHome()
         default:
             return
         }
@@ -118,11 +121,29 @@ extension OnboardingSelectionVC {
     }
 
     func goToLevel() {
-        if let nextVC = UIStoryboard.main.instantiateViewController(withIdentifier: "OnboardingNameVC") as? OnboardingNameVC {
+        if let nextVC = UIStoryboard.main.instantiateViewController(withIdentifier: "OnboardingSelectionVC") as? OnboardingSelectionVC {
             onboardingVM?.pageType = .level
             nextVC.onboardingVM = onboardingVM
             navigationController?.pushViewController(nextVC, animated: true)
         }
     }
-    
+
+    func goToAppIcon() {
+        if let nextVC = UIStoryboard.main.instantiateViewController(withIdentifier: "OnboardingAppIconVC") as? OnboardingAppIconVC {
+            onboardingVM?.pageType = .appIcon
+            nextVC.onboardingVM = onboardingVM
+            navigationController?.pushViewController(nextVC, animated: true)
+        }
+    }
+
+    func goToHome() {
+        if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let window = scene.windows.first {
+            
+            let viewController = UIStoryboard.home.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
+            let navController = UINavigationController(rootViewController: viewController)
+            window.rootViewController = navController
+            window.makeKeyAndVisible()
+        }
+    }
 }
