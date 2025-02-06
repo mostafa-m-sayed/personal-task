@@ -14,7 +14,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NIv-HD-rCC">
-                    <rect key="frame" x="16" y="70" width="361" height="391"/>
+                    <rect key="frame" x="16" y="56" width="361" height="391"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U3i-s0-uPX">
                             <rect key="frame" x="0.0" y="0.0" width="361" height="117"/>
@@ -91,7 +91,7 @@
             <constraints>
                 <constraint firstItem="NIv-HD-rCC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="3PM-ko-CQM"/>
                 <constraint firstAttribute="trailing" secondItem="NIv-HD-rCC" secondAttribute="trailing" constant="16" id="Dve-eL-oUq"/>
-                <constraint firstItem="NIv-HD-rCC" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-36" id="Iir-ZI-eaz"/>
+                <constraint firstItem="NIv-HD-rCC" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-50" id="Iir-ZI-eaz"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>

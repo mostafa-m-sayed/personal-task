@@ -32,9 +32,11 @@ final class QuizCollectionCell: UICollectionViewCell {
                 }
                 answer.isSelected = true
                 if index == quizItem.correctAnswerIndex {
+                    HapticManager.shared.performHapticFeedback(.success)
                     optionView.setAnswerState(true)
                     self.delegate?.didSelectAnswer(isCorrect: true)
                 } else {
+                    HapticManager.shared.performHapticFeedback(.error)
                     optionView.setAnswerState(false)
                     self.delegate?.didSelectAnswer(isCorrect: false)
                     (answersStackView.arrangedSubviews[quizItem.correctAnswerIndex] as? AnswerOptionView)?.setAnswerState(true)

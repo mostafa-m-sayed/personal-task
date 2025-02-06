@@ -7,6 +7,7 @@
 
 class VocabularyVM {
     var vocabularyRepository: VocabularyRepositoryProtocol
+    var vocabularies: [Vocabulary]?
 
     init(repository: VocabularyRepositoryProtocol) {
         self.vocabularyRepository = repository
@@ -15,6 +16,7 @@ class VocabularyVM {
     func getVocabulary() async throws -> [Vocabulary] {
         do {
             let vocabularyList = try await vocabularyRepository.getVocabularies()
+            self.vocabularies = vocabularyList.vocabularies
             return vocabularyList.vocabularies
         } catch {
             throw error

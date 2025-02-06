@@ -58,6 +58,7 @@ final class QuizVC: UIViewController {
         if lastQuestion {
             let popup = ScorePopupView(score: "\(correctAnswers)/\(quizVM?.quiz?.count ?? 0)")
             popup.delegate = self
+            HapticManager.shared.performImpactFeedback(style: .heavy)
             popup.show(in: self.view)
             return
         }

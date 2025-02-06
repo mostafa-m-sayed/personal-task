@@ -57,9 +57,13 @@ final class HomeVC: UIViewController {
     private func applyInitialSnapshot(vocabs: [Vocabulary]) {
         var snapshot = NSDiffableDataSourceSnapshot<Int, Vocabulary>()
         snapshot.appendSections([0])
-
         snapshot.appendItems(vocabs)
         dataSource.apply(snapshot, animatingDifferences: true)
+    }
+
+    private func restartScrolling() {
+        let indexPath = IndexPath(item: 0, section: 0)
+        collectionView.scrollToItem(at: indexPath, at: .top, animated: false)
     }
 
     private func addGestures() {
@@ -72,6 +76,7 @@ final class HomeVC: UIViewController {
     }
 
     func showQuizTip() {
+        HapticManager.shared.performHapticFeedback(.success)
         let tooltip = TooltipView(text: "You can also take a quick quiz about the vocabularies you learned!")
         tooltip.show(above: quizContainerView, in: self.view)
         UserDefaults.standard.set(true, forKey: "quiz-tooltip-shown")
@@ -83,7 +88,7 @@ extension HomeVC: UICollectionViewDelegateFlowLayout {
     }
 
     func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if indexPath.row == 2 {
+        if indexPath.row == 1 {
             if UserDefaults.standard.bool(forKey: "quiz-tooltip-shown") == false {
                 showQuizTip()
             }
@@ -91,3 +96,14 @@ extension HomeVC: UICollectionViewDelegateFlowLayout {
     }
     
 }
+extension HomeVC: UIScrollViewDelegate {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let currentIndex = Int(collectionView.contentOffset.y / collectionView.frame.height)
+        let lastIndex = dataSource.snapshot().numberOfItems - 1
+
+        if currentIndex == lastIndex {
+            restartScrolling()
+        }
+    }
+}
+

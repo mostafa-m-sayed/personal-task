@@ -21,9 +21,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cMO-MX-hbv">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mbV-lU-Quo">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" sectionInsetReference="layoutMargins" id="mbV-lU-Quo">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -54,10 +54,10 @@
                         <constraints>
                             <constraint firstItem="cMO-MX-hbv" firstAttribute="trailing" secondItem="uxd-Ec-OlZ" secondAttribute="trailing" id="1mh-Oe-1jJ"/>
                             <constraint firstItem="uxd-Ec-OlZ" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="FVZ-ka-Eop"/>
-                            <constraint firstItem="cMO-MX-hbv" firstAttribute="top" secondItem="uxd-Ec-OlZ" secondAttribute="top" id="Hhz-yP-D3m"/>
-                            <constraint firstItem="cMO-MX-hbv" firstAttribute="bottom" secondItem="uxd-Ec-OlZ" secondAttribute="bottom" id="TBt-kP-Ofg"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="cMO-MX-hbv" secondAttribute="bottom" id="LHb-tj-sDj"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ehE-VZ-knT" secondAttribute="bottom" constant="100" id="WRE-ha-mfE"/>
                             <constraint firstAttribute="trailing" secondItem="uxd-Ec-OlZ" secondAttribute="trailing" id="cSb-iM-uEx"/>
+                            <constraint firstItem="cMO-MX-hbv" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="hkq-Rd-BJ5"/>
                             <constraint firstItem="uxd-Ec-OlZ" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="quv-Si-haf"/>
                             <constraint firstItem="cMO-MX-hbv" firstAttribute="leading" secondItem="uxd-Ec-OlZ" secondAttribute="leading" id="vbG-k2-fhj"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ehE-VZ-knT" secondAttribute="trailing" constant="20" id="yNO-Hy-nAJ"/>
